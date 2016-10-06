@@ -1,0 +1,53 @@
+/* Styles for index.html */
+body {
+  background-image:url("bg_beige1.png");
+  background-repeat: repeat;
+}
+.body_container {
+  padding: 30px;
+}
+.orange {
+  color: orange;
+}
+.blue {
+  color: #4682B4;
+}
+
+.heading-container {
+  font-size:82px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.profile-img-container {
+  width: 400px;
+  margin: 5px auto;
+}
+.work-container {
+  font-size: 54px;
+}
+.work-container a {
+  text-decoration: none;
+}
+
+/* Styles for typed.js for a typed-cursor */
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}

@@ -5,36 +5,71 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Talha.io</title>
 
-  <!-- Latest compiled and minified CSS -->
+  <!-- jQuery -->
+  <script src="assets/jquery3.1.1.js"></script>
+
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-  <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  <style type="text/css" media="screen">
-    body {
-      background-image:url("style/bg_beige1.png");
-      background-repeat: repeat;
-    }
-    .body_container {
-      padding: 30px;
-    }
-    .orange {
-      color: orange;
-    }
-    .h0 {
-      font-size:52px;
-    }
+  <link href="assets/styles.css" rel="stylesheet" type="text/css">
+
   </style>
 </head>
 
 <body>
   <div class="body_container">
-    <div class="h0 text-center">Hello, I am <span class="orange">Talha.</span></div>
+    <div class="heading-container text-center"><span id="heading-typed"></span></span></div>
+    <div class="profile-img-container text-center">
+      <img src="assets/profile_pic1.png">
+    </div>
+    <div class="work-container text-center">
+      <span id="work-typed"></span>
+    </div>
   </div>
-
 </body>
+
+<!-- jQuery -->
+<script src="assets/typed.js"></script>
+
+<script type="text/javascript">
+
+var headingText = 'Hello, ^1000 I am <span class="orange">Talha.</span>';
+var workText = 'I am a <span class="blue">coder,</span> at <a href="https://www.nextjump.com"><span class="orange">Next Jump.</span></a>'
+
+$(document).ready(
+  function() {
+    initalize();
+  }
+);
+function initalize() {
+  $('#heading-typed').typed({
+    strings: [headingText],
+    typeSpeed: 0,
+    showCursor: true,
+    callback: function() {
+      $('.heading-container .typed-cursor').hide();
+    }
+  });
+
+  $('#work-typed').typed({
+    strings: [workText],
+    startDelay: 3000,
+    typeSpeed: 0,
+    showCursor: true,
+    preStringTyped: function() {
+      $('.work-container .typed-cursor').show();
+    },
+    callback: function() {
+      // $('.work-container .typed-cursor').hide();
+    }
+  });
+  $('.work-container .typed-cursor').hide(); // This comes after the typed.js initialization above, but because of the delay mentioned in options above, it is processed before the typing.
+}
+
+
+
+
+</script>
 </html>
