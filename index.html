@@ -19,7 +19,8 @@
 </head>
 
 <body>
-  <div class="body_container">
+  <div class="body_container container-fluid">
+
     <div class="heading-container text-center"><span id="heading-typed"></span></span></div>
     <div class="profile-img-container text-center">
       <img src="assets/profile_pic1.png">
@@ -27,49 +28,30 @@
     <div class="work-container text-center">
       <span id="work-typed"></span>
     </div>
+    <div class="subwork-container text-center">
+      <span id="subwork-typed"></span>
+    </div>
+
+    <div class="row contact-bar">
+      <div class="col-md-3 contact-img">
+        <a href="https://github.com/talhajansari"><img src="assets/contact/github.png"></a>
+      </div>
+      <div class="col-md-3 contact-img">
+        <a href="https://www.facebook.com/talhajansari"><img src="assets/contact/facebook.png"></a>
+      </div>
+      <div class="col-md-3 contact-img">
+        <a href="https://www.linkedin.com/in/talhajansari"><img src="assets/contact/linkedin.png"></a>
+      </div>
+      <div class="col-md-3 contact-img">
+        <a href="mailto:info@talha.io"><img src="assets/contact/email.png"></a>
+      </div>
+    </div>
   </div>
+
 </body>
 
 <!-- jQuery -->
 <script src="assets/typed.js"></script>
+<script src="assets/index.js"></script>
 
-<script type="text/javascript">
-
-var headingText = 'Hello, ^1000 I am <span class="orange">Talha.</span>';
-var workText = 'I am a <span class="blue">coder,</span> at <a href="https://www.nextjump.com"><span class="orange">Next Jump.</span></a>'
-
-$(document).ready(
-  function() {
-    initalize();
-  }
-);
-function initalize() {
-  $('#heading-typed').typed({
-    strings: [headingText],
-    typeSpeed: 0,
-    showCursor: true,
-    callback: function() {
-      $('.heading-container .typed-cursor').hide();
-    }
-  });
-
-  $('#work-typed').typed({
-    strings: [workText],
-    startDelay: 3000,
-    typeSpeed: 0,
-    showCursor: true,
-    preStringTyped: function() {
-      $('.work-container .typed-cursor').show();
-    },
-    callback: function() {
-      // $('.work-container .typed-cursor').hide();
-    }
-  });
-  $('.work-container .typed-cursor').hide(); // This comes after the typed.js initialization above, but because of the delay mentioned in options above, it is processed before the typing.
-}
-
-
-
-
-</script>
 </html>

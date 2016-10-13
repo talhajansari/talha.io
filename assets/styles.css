@@ -1,6 +1,6 @@
 /* Styles for index.html */
 body {
-  background-image:url("bg_beige1.png");
+  /*background-image:url("bg_beige1.png");*/
   background-repeat: repeat;
 }
 .body_container {
@@ -22,13 +22,33 @@ body {
   width: 400px;
   margin: 5px auto;
 }
-.work-container {
+.work-container, .subwork-container {
+  height:70px;
   font-size: 54px;
 }
 .work-container a {
   text-decoration: none;
 }
-
+.subwork-container {
+  margin-bottom: 40px;
+}
+.contact-bar {
+ margin-top: 50px;
+}
+div.contact-img {
+  text-align: center;
+  vertical-align: bottom;
+  margin: 0 auto;
+}
+div.contact-img img{
+  width:60px
+}
+div.contact-img img:hover{
+  width:70px;
+  -webkit-transition: width 0.1s; /* Safari */
+  transition: width 0.1s;
+  cursor: pointer;
+}
 /* Styles for typed.js for a typed-cursor */
 .typed-cursor{
     opacity: 1;
