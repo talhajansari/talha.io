@@ -1,5 +1,5 @@
 var headingText = ['Hello, ^1000 I am <span class="orange">Talha.</span>'];
-var workText = ['I am a <span class="blue">coder,</span> ^1000at <a href="https://www.nextjump.com"><span class="orange">Next Jump</span></a>']
+var workText = ['I am a <span class="blue">coder,</span> ^1000at <a href="https://www.nextjump.com"><span class="orange">Next Jump.</span></a>']
 var subworkText = ['I like <span class="blue">chicken tikka</span> and <span class="orange">nihari^1000.</span>']
 
 $(document).ready(

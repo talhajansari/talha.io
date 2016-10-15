@@ -1,8 +1,7 @@
 /* Styles for index.html */
 
 body {
-  background-image:url("bg_paper1.jpg");
-  background-repeat: repeat;
+  background-image:url("bg_paper1.png");
 }
 .body_container {
   padding: 30px;
