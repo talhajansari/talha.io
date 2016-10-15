@@ -28,7 +28,6 @@ var initiateTyped = function(element, strings, delay, instant) {
     typeSpeed=-1000000;
     for (var i = 0; i < strings.length; i++) {
       strings[i] = strings[i].replace(/\^\d+/g,'');
-      console.log(strings[i]);
     }
 
   } else {
