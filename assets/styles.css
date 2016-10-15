@@ -34,11 +34,12 @@ body {
 }
 .contact-bar {
  margin-top: 50px;
+ height: 100px;
 }
 div.contact-img {
   text-align: center;
   vertical-align: bottom;
-  margin: 0 auto;
+  display: none;
 }
 div.contact-img img{
   width:60px
