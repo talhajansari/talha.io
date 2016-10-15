@@ -1,4 +1,5 @@
 /* Styles for index.html */
+
 body {
   background-image:url("bg_paper1.jpg");
   background-repeat: repeat;
@@ -6,6 +7,7 @@ body {
 .body_container {
   padding: 30px;
   display: none;
+  overflow: hidden;
 }
 .orange {
   color: orange;
@@ -13,25 +15,31 @@ body {
 .blue {
   color: #4682B4;
 }
+.text-container {
+  overflow: hidden;
+  text-align: center;
+}
 
 .heading-container {
-  font-size:82px;
+  /*font-size:8em;*/
   margin-top: 50px;
   margin-bottom: 50px;
 }
 .profile-img-container {
-  width: 400px;
+  width: 100%;
   margin: 5px auto;
+  text-align: center;
 }
 .work-container, .subwork-container {
-  height:70px;
-  font-size: 54px;
+  min-height:70px;
+  /*font-size: 54px;*/
 }
 .work-container a {
   text-decoration: none;
 }
 .subwork-container {
   margin-bottom: 40px;
+  overflow: hidden;
 }
 .contact-bar {
  margin-top: 50px;
@@ -41,6 +49,7 @@ div.contact-img {
   text-align: center;
   vertical-align: bottom;
   display: none;
+  margin-top: 10px;
 }
 div.contact-img img{
   width:60px
