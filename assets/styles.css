@@ -1,10 +1,11 @@
 /* Styles for index.html */
 body {
-  /*background-image:url("bg_beige1.png");*/
+  background-image:url("bg_paper1.jpg");
   background-repeat: repeat;
 }
 .body_container {
   padding: 30px;
+  display: none;
 }
 .orange {
   color: orange;

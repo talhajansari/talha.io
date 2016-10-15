@@ -4,6 +4,7 @@ var subworkText = ['I like <span class="blue">chicken tikka</span> and <span cla
 
 $(document).ready(
   function() {
+    $('div.body_container').show();
     initalize();
   }
 );
