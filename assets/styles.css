@@ -54,7 +54,9 @@ div.contact-img img{
   width:60px
 }
 div.contact-img img:hover{
-  width:70px;
+  /*width:70px;*/
+  position: relative;;
+  bottom: 1px;
   -webkit-transition: width 0.1s; /* Safari */
   transition: width 0.1s;
   cursor: pointer;
