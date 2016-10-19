@@ -1,7 +1,12 @@
 /* Styles for index.html */
 
 body {
-  background-image:url("bg_paper1.png");
+  /*background-image:url("bg_paper1.png");*/
+  webkit-transition: background-url 0.5s ease;
+  transition: background-url .5s ease;
+}
+.hide {
+  display: none;
 }
 .body_container {
   padding: 30px;
@@ -41,8 +46,8 @@ body {
   overflow: hidden;
 }
 .contact-bar {
- margin-top: 50px;
- height: 100px;
+  margin-top: 50px;
+  height: 100px;
 }
 div.contact-img {
   text-align: center;
@@ -63,23 +68,23 @@ div.contact-img img:hover{
 }
 /* Styles for typed.js for a typed-cursor */
 .typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
 }
 @keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }
 @-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }
 @-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }

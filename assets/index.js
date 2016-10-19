@@ -4,8 +4,11 @@ var subworkText = ['I like <span class="blue">chicken tikka</span> and <span cla
 
 $(document).ready(
   function() {
-    $('div.body_container').show();
-    initalize();
+    $( "#bg-img" ).imagesLoaded( function() {
+      $('body').css('background-image', 'url('+'assets/bg_paper1.png'+')');
+      $('div.body_container').show();
+      initalize();
+    });
   }
 );
 function initalize() {
