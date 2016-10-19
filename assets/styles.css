@@ -1,5 +1,10 @@
 /* Styles for index.html */
-
+@font-face {
+    font-family: 'ToxTypewriter';
+    src: url('fonts/tox_typewriter/ToxTypewriter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
   /*background-image:url("bg_paper1.png");*/
   webkit-transition: background-url 0.5s ease;
@@ -12,6 +17,7 @@ body {
   padding: 30px;
   display: none;
   overflow: hidden;
+  font-family: ToxTypewriter;
 }
 .orange {
   color: orange;
