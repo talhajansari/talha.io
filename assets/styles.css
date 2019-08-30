@@ -51,13 +51,8 @@ body {
 span.underlineOnHover:hover {
   text-decoration: underline;
 }
-.contact-bar {
-  height: 60px;
-  display: none; /* It will be faded in */
-}
+
 div.contact-img {
-  text-align: center;
-  vertical-align: bottom;
   margin-top: 10px;
 }
 div.contact-img img{

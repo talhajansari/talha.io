@@ -1,22 +1,23 @@
-const newTyper = (duration, strs) => {
+const newTyper = (duration, elementId, strs) => {
   return {
     Text: strs,
-    Duration: duration
+    Duration: duration,
+    ElementId: elementId
   };
 };
 const typedText = {
-  heading: newTyper(1000, [
+  heading: newTyper(1000, "heading-typed", [
     'Hello, ^1000 I am <span class="orange">Talha.</span>'
   ]),
-  work: newTyper(4000, [
+  work: newTyper(4000, "work-typed", [
     'I am a <span class="blue">coder,</span> ^1000at <a href="https://www.glassdoor.com/Overview/Working-at-Devoted-Health-EI_IE2183017.11,25.htm" target="_blank"><span class="purple underlineOnHover">Devoted Health.</span></a>'
   ]),
-  other: newTyper(7000, [
+  other: newTyper(7000, "subwork-typed", [
     'I like <span class="blue">lamb chops</span> and <a href="https://en.wikipedia.org/wiki/Nihari" target="_blank"><span class="orange">nihari^1000.</span></a>^1000',
-    'I also like ^500tinkering with ^500<a href="https://golang.org/" target="_blank">Go.</a>^1000',
-    'You can check out^500 my Github at ^500<a href="https://github.com/teejays" target="_blank">github.com/teejays.</a>'
+    'I also like ^500tinkering with^500 <a href="https://golang.org/" target="_blank">Go.</a>^1000',
+    'You can check out^500 my Github at^500 <a href="https://github.com/teejays" target="_blank">github.com/teejays.</a>'
   ]),
-  convo: newTyper(20000, [
+  convo: newTyper(20000, "convo-typed", [
     "^10000",
     "I am not going to be^500 typing forever,^1000 in case you are wondering...^5000",
     "^...^500",
@@ -45,10 +46,6 @@ $(document).ready(function() {
 });
 
 function initalize() {
-  // Fade In the Contact Bar
-  setTimeout(function() {
-    $(".contact-bar").fadeIn(800);
-  }, 100);
 
   // Fade In the Profile Picture
   setTimeout(function() {
@@ -56,34 +53,13 @@ function initalize() {
   }, 100);
 
   // Initialize the typings
-  // If we have already visited the site from this device, let's not waste time printing things slowly.
-  initiateTyped(
-    $("#heading-typed"),
-    typedText.heading.Text,
-    typedText.heading.Duration,
-    isSessionVisited()
-  );
-  initiateTyped(
-    $("#work-typed"),
-    typedText.work.Text,
-    typedText.work.Duration,
-    false
-  );
-  initiateTyped(
-    $("#subwork-typed"),
-    typedText.other.Text,
-    typedText.other.Duration,
-    false
-  );
-  initiateTyped(
-    $("#convo-typed"),
-    typedText.convo.Text,
-    typedText.convo.Duration,
-    false
-  );
+  Object.keys(typedText).map((key, i) => {
+    const item = typedText[key];
+    initiateTyped(item.ElementId, item.Text, item.Duration, false);
+  });
 }
 
-var initiateTyped = function(element, strings, delay, instant) {
+var initiateTyped = function(elementId, strings, delay, instant) {
   if (typeof delay === "undefined") {
     delay = delay * 0.1;
   }
@@ -97,18 +73,19 @@ var initiateTyped = function(element, strings, delay, instant) {
       strings[i] = strings[i].replace(/\^\d+/g, "");
     }
   } else {
-    typeSpeed = -10;
+    typeSpeed = 30;
   }
-
-  element.typed({
+  const element = $(`#${elementId}`);
+  var typed = new Typed(`#${elementId}`, {
     strings: strings,
+    // contentType: "html",
     startDelay: delay,
     typeSpeed: typeSpeed,
     showCursor: true,
     preStringTyped: function() {
       element.next().show();
     },
-    callback: function() {
+    onComplete: function() {
       element.next().hide();
     }
   });
