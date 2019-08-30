@@ -25,47 +25,45 @@ body {
 .blue {
   color: #4682B4;
 }
-.text-container {
-  overflow: hidden;
-  text-align: center;
+.purple {
+  color: #400080;
 }
 
-.heading-container {
-  /*font-size:8em;*/
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
 .profile-img-container {
-  width: 100%;
+  /* width: 100%; */
+  /* text-align: center; */
   margin: 5px auto;
-  text-align: center;
+  display: none; /* It will be faded in */
 }
-.work-container, .subwork-container {
-  min-height:70px;
-  /*font-size: 54px;*/
+.profile-img-container img{
+  -webkit-filter: grayscale(85%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(85%);
 }
-.work-container a {
+.text-container {
+  text-decoration: none;
+  overflow: hidden;
+  line-height: 100%;
+  margin-top: 20px;
+}
+.text-container a {
   text-decoration: none;
 }
-.subwork-container {
-  margin-bottom: 40px;
-  overflow: hidden;
+span.underlineOnHover:hover {
+  text-decoration: underline;
 }
 .contact-bar {
-  margin-top: 50px;
-  height: 100px;
+  height: 60px;
+  display: none; /* It will be faded in */
 }
 div.contact-img {
   text-align: center;
   vertical-align: bottom;
-  display: none;
   margin-top: 10px;
 }
 div.contact-img img{
-  width:60px
+  width:40px
 }
 div.contact-img img:hover{
-  /*width:70px;*/
   position: relative;;
   bottom: 1px;
   -webkit-transition: width 0.1s; /* Safari */
@@ -75,9 +73,9 @@ div.contact-img img:hover{
 /* Styles for typed.js for a typed-cursor */
 .typed-cursor{
   opacity: 1;
-  -webkit-animation: blink 0.7s infinite;
-  -moz-animation: blink 0.7s infinite;
-  animation: blink 0.7s infinite;
+  -webkit-animation: blink 1s infinite;
+  -moz-animation: blink 1s infinite;
+  animation: blink 1s infinite;
 }
 @keyframes blink{
   0% { opacity:1; }

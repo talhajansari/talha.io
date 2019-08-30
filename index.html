@@ -1,72 +1,99 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Talha.io</title>
 
   <!-- Google Analytics -->
   <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function () {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      "script",
+      "https://www.google-analytics.com/analytics.js",
+      "ga"
+    );
 
-  ga('create', 'UA-36899823-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
+    ga("create", "UA-36899823-2", "auto");
+    ga("send", "pageview");
+  </script>
   <!-- jQuery -->
   <script src="assets/jquery3.1.1.js"></script>
 
   <!-- Bootstrap -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.3.1/js/tether.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
+    integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"
+    integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU"
+    crossorigin="anonymous"></script>
 
-
-
-  <link href="assets/styles.css" rel="stylesheet" type="text/css">
-
-  </style>
+  <link href="assets/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <img id="bg-img" class="hide" src="assets/bg_paper1.png">
-  <div class="body_container container-fluid">
-
-    <div class="text-container heading-container display-1"><span id="heading-typed"></span></span></div>
-    <div class="profile-img-container text-center">
-      <img src="assets/profile_pic1.png">
+  <img id="bg-img" class="hide" src="assets/bg_paper1.png" />
+  <!-- Contact Bar -->
+  <div class="row contact-bar">
+    <div class="col-xs-6 col-md-1 offset-md-7 contact-img">
+      <a target="_blank" href="https://github.com/teejays"><img src="assets/contact/github.png" /></a>
     </div>
-    <div class="text-container work-container display-4">
-      <span id="work-typed"></span>
+    <div class="col-xs-6 col-md-1 contact-img">
+      <a target="_blank" href="https://www.facebook.com/talhajansari"><img src="assets/contact/facebook.png" /></a>
     </div>
-    <div class="text-container subwork-container display-4">
-      <span id="subwork-typed"></span>
+    <div class="col-xs-6 col-md-1 contact-img">
+      <a target="_blank" href="https://www.linkedin.com/in/talhajansari">
+        <img src="assets/contact/linkedin.png" />
+      </a>
     </div>
-
-    <div class="row contact-bar">
-      <div class="col-xs-6 col-md-2 offset-md-1 contact-img">
-        <a target="_blank" href="https://github.com/talhajansari"><img src="assets/contact/github.png"></a>
-      </div>
-      <div class="col-xs-6 col-md-2 contact-img">
-        <a target="_blank" href="https://www.facebook.com/talhajansari"><img src="assets/contact/facebook.png"></a>
-      </div>
-      <div class="col-xs-6 col-md-2 contact-img">
-        <a target="_blank" href="https://www.linkedin.com/in/talhajansari"><img src="assets/contact/linkedin.png"></a>
-      </div>
-      <div class="col-xs-6 col-md-2 contact-img">
-        <a target="_blank" href="https://www.amazon.com/clouddrive/share/bBBCNulR3jr0ipmikA02kUYiiWi0SVyTBiAqh8cmdM8?v=grid&ref_=cd_ph_share_link_copy"><img src="assets/contact/photography.png"></a>
-      </div>
-      <div class="col-xs-12 col-md-2 contact-img">
-        <a href="mailto:info@talha.io"><img src="assets/contact/email.png"></a>
-      </div>
+    <div class="col-xs-6 col-md-1 contact-img">
+      <a target="_blank"
+        href="https://www.amazon.com/clouddrive/share/bBBCNulR3jr0ipmikA02kUYiiWi0SVyTBiAqh8cmdM8?v=grid&ref_=cd_ph_share_link_copy"><img
+          src="assets/contact/photography.png" /></a>
+    </div>
+    <div class="col-xs-12 col-md-1 contact-img">
+      <a href="mailto:info@talha.io"><img src="assets/contact/email.png" /></a>
     </div>
   </div>
 
+  <!-- Main Container -->
+  <div class="body_container container-fluid">
+    <!-- Profile Picture -->
+    <div class="profile-img-container text-center" style="float: left">
+      <img src="assets/profile_pic1.png" />
+    </div>
+    <!-- Title Text (Permanent) -->
+    <div class="text-container heading-container display-4">
+      <span id="heading-typed"></span>
+    </div>
+    <!-- Work Text (Permanent) -->
+    <div class="text-container work-container display-4">
+      <span id="work-typed"></span>
+    </div>
+    <!-- Other Text -->
+    <div class="text-container subwork-container display-4">
+      <span id="subwork-typed"></span>
+    </div>
+    <!-- Convo Text -->
+    <div class="text-container convo-container display-4">
+      <span id="convo-typed"></span>
+    </div>
+
+  </div>
 </body>
 
 <!-- jQuery -->
