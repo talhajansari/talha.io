@@ -67,13 +67,13 @@ function initalize() {
     $("#work-typed"),
     typedText.work.Text,
     typedText.work.Duration,
-    isSessionVisited()
+    false
   );
   initiateTyped(
     $("#subwork-typed"),
     typedText.other.Text,
     typedText.other.Duration,
-    isSessionVisited()
+    false
   );
   initiateTyped(
     $("#convo-typed"),
