@@ -20,7 +20,7 @@ const typedText = {
   convo: newTyper(20000, "convo-typed", [
     "^10000",
     "I am not going to be^500 typing forever,^1000 in case you are wondering...^5000",
-    "^...^500",
+    "...^500",
     "I meant it.^1000.. I have things to do..^1000 Important things!",
     "Like^400...^500playing Fifa...^500 :/ ^2000",
     "Aghh... well,^1000 if you don't trust me,^500 you can check^500 the source code for this webpage.^2000",
@@ -81,6 +81,7 @@ var initiateTyped = function(elementId, strings, delay, instant) {
     // contentType: "html",
     startDelay: delay,
     typeSpeed: typeSpeed,
+    smartBackspace: false,
     showCursor: true,
     preStringTyped: function() {
       element.next().show();
